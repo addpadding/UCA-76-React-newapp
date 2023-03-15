@@ -5,20 +5,25 @@ import Home from "./Components/Home"
 // ===========
 class App extends Component {
     state = {
+        name: "App Comp"
+    }
+
+    UpdateName = () => {
+        this.setState({
+            name: "App Comp 2"
+        })
     }
 
     render() {
-        // console.log(this.state.name);
+        console.log("App Comp");
         return (
             <div className="App">
 
                 App Component
 
-                <ul>
-                    <Home />
-                </ul>
+                <button onClick={this.UpdateName}>Update</button>
 
-                {/* <Home /> */}
+                <Home />
 
             </div>
         )

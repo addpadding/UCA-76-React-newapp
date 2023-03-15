@@ -1,25 +1,16 @@
-import React, { Component, Fragment } from 'react'
+import React, { Component, PureComponent } from 'react'
 
-class Home extends Component {
+class Home extends PureComponent {
 
-    constructor(props) {
-        super();
-        console.log("constructor");
-
-        this.state = {
-            name: "Home",
-        }
-    }
-
+    shouldComponentUpdate
 
     render() {
-        console.log("render");
+        console.log("Home Comp");
         return (
 
-            <Fragment>
-                <li>Home</li>
-                <li>About</li>
-            </Fragment>
+            <div>
+                Home Comp
+            </div>
 
         )
     }

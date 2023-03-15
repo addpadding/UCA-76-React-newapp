@@ -1,6 +1,4 @@
 import React, { Component } from 'react'
-import withComp from './withComp'
-
 
 class CompB extends Component {
     render() {
@@ -13,4 +11,4 @@ class CompB extends Component {
         )
     }
 }
-export default withComp(CompB)
+export default CompB

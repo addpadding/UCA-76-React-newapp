@@ -4,15 +4,29 @@ import React, { Component } from "react";
 import CompA from "./Components/CompA"
 import CompB from "./Components/CompB"
 
+import Comp from "./Components/Comp"
+
 // ===========
 class App extends Component {
     render() {
-        console.log("App Comp");
         return (
             <div className="App">
 
-                <CompA test="test Comp A" />
-                <CompB />
+                {/* 
+                <Comp test={(vl) => {
+                    return vl
+                }} /> */}
+
+                <Comp
+                    render={(arg1, arg2) => <CompA name={arg1} upDateNameState={arg2} />}
+                />
+
+                <Comp
+                    render={(arg1, arg2) => <CompB name={arg1} upDateNameState={arg2} />}
+                />
+
+                {/* <CompA test="test Comp A" /> */}
+                {/* <CompB /> */}
 
             </div>
         )

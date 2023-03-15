@@ -11,7 +11,7 @@ class App extends Component {
         return (
             <div className="App">
 
-                <CompA />
+                <CompA test="test Comp A" />
                 <CompB />
 
             </div>

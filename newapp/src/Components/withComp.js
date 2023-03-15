@@ -13,7 +13,11 @@ const withComp = (OrgComp) => {
         }
 
         render() {
-            return <OrgComp name={this.state.name} upDateNameState={this.upDateNameState} />
+            return <OrgComp
+                name={this.state.name}
+                upDateNameState={this.upDateNameState}
+                {...this.props}
+            />
         }
     }
 }

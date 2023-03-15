@@ -1,29 +1,18 @@
 // ===========
 import React, { Component } from "react";
-import Home from "./Components/Home"
+
+import CompA from "./Components/CompA"
+import CompB from "./Components/CompB"
 
 // ===========
 class App extends Component {
-    state = {
-        name: "App Comp"
-    }
-
-    UpdateName = () => {
-        this.setState({
-            name: "App Comp 2"
-        })
-    }
-
     render() {
         console.log("App Comp");
         return (
             <div className="App">
 
-                App Component
-
-                <button onClick={this.UpdateName}>Update</button>
-
-                <Home />
+                <CompA />
+                <CompB />
 
             </div>
         )

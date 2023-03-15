@@ -14,7 +14,11 @@ class App extends Component {
 
                 App Component
 
-                <Home x="ssss" />
+                <ul>
+                    <Home />
+                </ul>
+
+                {/* <Home /> */}
 
             </div>
         )

@@ -2,8 +2,8 @@ import React, { Component } from 'react'
 
 /*
     - Mounting [ constructor - getDerivedStateFromProps - render - componentDidMount]
-    - Updating
-    - UnMounting
+    - Updating [ getDerivedStateFromProps - shouldComponentUpdate - render - getSnapshotBeforeUpdate - componentDidUpdate ]
+    - UnMounting [ componentWillUnmount ]
 */
 
 class Home extends Component {
@@ -29,8 +29,21 @@ class Home extends Component {
         return null
     }
 
-    componentDidMount() {
-        console.log("CDM = componentDidMount");
+    shouldComponentUpdate(nextProps, nextState) {
+        console.log("scu = shouldComponentUpdate")
+        return true
+    }
+
+    getSnapshotBeforeUpdate = (prevProps, prevState) => {
+        console.log("gsbu = getSnapshotBeforeUpdate")
+    }
+
+    componentDidUpdate(prevProps, prevState) {
+        console.log("cdup = componentDidUpdate")
+    }
+
+    componentWillUnmount() {
+        console.log("cwun = componentWillUnmount")
     }
 
     render() {

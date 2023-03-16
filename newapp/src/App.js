@@ -5,6 +5,12 @@ import CompA from "./Components/CompA"
 import CompB from "./Components/CompB"
 
 import Comp from "./Components/Comp"
+import RenderProps from "./Components/RenderProps"
+
+// const hamadan = (value) => {
+//     console.log(value);
+// }
+// hamadan("ssss")
 
 // ===========
 class App extends Component {
@@ -12,10 +18,10 @@ class App extends Component {
         return (
             <div className="App">
 
-                {/* 
-                <Comp test={(vl) => {
-                    return vl
-                }} /> */}
+                {/* <RenderProps hamadan="any thing" /> */}
+                <RenderProps hamadan={(value, p2) => {
+                    return <div> {value}  {p2} </div>
+                }} />
 
                 <Comp
                     render={(arg1, arg2) => <CompA name={arg1} upDateNameState={arg2} />}
@@ -25,8 +31,6 @@ class App extends Component {
                     render={(arg1, arg2) => <CompB name={arg1} upDateNameState={arg2} />}
                 />
 
-                {/* <CompA test="test Comp A" /> */}
-                {/* <CompB /> */}
 
             </div>
         )

@@ -1,6 +1,9 @@
 // ===========
 import React, { Component } from "react";
 
+import TestComp from "./Components/TestComp";
+import TestHComp from "./Components/TestHComp";
+
 // ===========
 class App extends Component {
     state = {}
@@ -9,7 +12,8 @@ class App extends Component {
         return (
 
             <div>
-                code
+                {/* <TestComp x="value" /> */}
+                <TestHComp x="value" y=" y value" />
             </div>
 
         )

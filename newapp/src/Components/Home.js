@@ -6,20 +6,23 @@ class Home extends Component {
     constructor(props) {
         super(props)
 
-
-        this.inputRef = createRef();
+        this.callBackRef = null
+        this.callBackRefFun = (ele) => {
+            this.callBackRef = ele;
+        }
     }
 
     componentDidMount() {
-        this.inputRef.current.focus();
+        if (this.callBackRef) {
+            this.callBackRef.focus()
+        }
     }
 
     render() {
-        console.log("Home Comp");
         return (
 
             <div>
-                <input type="text" ref={this.inputRef} />
+                <input type="text" ref={this.callBackRefFun} />
             </div>
 
         )

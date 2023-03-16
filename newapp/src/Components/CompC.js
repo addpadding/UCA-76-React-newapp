@@ -1,14 +1,13 @@
-
 import React, { Component } from 'react'
 
-class Footer extends Component {
+class CompC extends Component {
     render() {
         return (
             <div>
-                {this.props.title}
+                CompC {this.props.name}
             </div>
         )
     }
 }
 
-export default Footer
+export default CompC

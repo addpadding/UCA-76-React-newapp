@@ -1,14 +1,16 @@
 import React, { Component } from 'react'
 
+import CompB from './CompB'
+
 class CompA extends Component {
     render() {
-        const { name, upDateNameState } = this.props;
         return (
             <div>
-                {name}
-                <button onClick={upDateNameState}>upDate Name</button>
+                Comp A
+                <CompB name={this.props.name} />
             </div>
         )
     }
 }
+
 export default CompA

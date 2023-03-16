@@ -2,7 +2,7 @@
 import React, { Component } from "react";
 
 import CompA from "./Components/CompA"
-import CompB from "./Components/CompB"
+import { CnxtProvider } from "./Components/contextComp"
 
 // ===========
 class App extends Component {
@@ -13,11 +13,13 @@ class App extends Component {
 
     render() {
         return (
-            <div className="App">
+            <CnxtProvider value={this.state.name} >
 
-                <CompA name={this.state.name} />
+                <div className="App">
+                    <CompA />
+                </div>
 
-            </div>
+            </CnxtProvider >
         )
     }
 }

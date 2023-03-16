@@ -1,27 +1,40 @@
 // ===========
-import React, { Component } from "react";
+import React from "react";
 
-import CompA from "./Components/CompA"
-import { CnxtProvider } from "./Components/contextComp"
+import { BrowserRouter, Route, Routes } from "react-router-dom"
+
+import Home from "./Components/Home";
+import CompA from "./Components/CompA";
+import CompB from "./Components/CompB";
+
+
 
 // ===========
-class App extends Component {
+function App() {
 
-    state = {
-        name: "App Comp"
-    }
+    return (
 
-    render() {
-        return (
-            <CnxtProvider value={this.state.name} >
+        <BrowserRouter>
 
-                <div className="App">
-                    <CompA />
-                </div>
+            <div>
+                <h1> 6666 </h1>
 
-            </CnxtProvider >
-        )
-    }
+                <Routes>
+                    <Route path="/" element={<Home />} />
+                    <Route path="/compa" element={<CompA />} />
+                    <Route path="/compb" element={<CompB />} />
+                </Routes>
+
+            </div>
+
+        </BrowserRouter>
+    )
 }
 
 export default App;
+
+
+
+
+
+

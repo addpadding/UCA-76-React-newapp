@@ -1,6 +1,8 @@
 // ===========
 import React, { Component } from "react";
 
+import Home from "./Components/Home"
+
 import CompA from "./Components/CompA"
 import CompB from "./Components/CompB"
 
@@ -18,8 +20,13 @@ class App extends Component {
         return (
             <div className="App">
 
-                {/* <RenderProps hamadan="any thing" /> */}
-                <RenderProps hamadan={(value, p2) => {
+
+
+
+                <Home />
+
+
+                {/* <RenderProps hamadan={(value, p2) => {
                     return <div> {value}  {p2} </div>
                 }} />
 
@@ -29,7 +36,7 @@ class App extends Component {
 
                 <Comp
                     render={(arg1, arg2) => <CompB name={arg1} upDateNameState={arg2} />}
-                />
+                /> */}
 
 
             </div>

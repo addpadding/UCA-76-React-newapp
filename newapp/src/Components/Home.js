@@ -1,15 +1,25 @@
-import React, { Component, PureComponent } from 'react'
+import React, { Component, createRef } from 'react'
 
-class Home extends PureComponent {
+class Home extends Component {
 
-    shouldComponentUpdate
+    // eslint-disable-next-line no-useless-constructor
+    constructor(props) {
+        super(props)
+
+
+        this.inputRef = createRef();
+    }
+
+    componentDidMount() {
+        this.inputRef.current.focus();
+    }
 
     render() {
         console.log("Home Comp");
         return (
 
             <div>
-                Home Comp
+                <input type="text" ref={this.inputRef} />
             </div>
 
         )
